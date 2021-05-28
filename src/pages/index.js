@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Sket Mall</title>
+        <title>Sket Mall from sajid</title>
       </Head>
 
       {/* ---- TO BEGIN, delete this section and GET CODING!!! ---- */}
