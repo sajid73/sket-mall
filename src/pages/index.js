@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Sket Mall from sajid</title>
       </Head>
-
+      
       {/* ---- TO BEGIN, delete this section and GET CODING!!! ---- */}
       <center className="grid place-items-center mt-10">
         <h1 className="text-5xl">Lets build Amazon 2.0</h1>
