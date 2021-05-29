@@ -4,6 +4,7 @@ import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../slices/basketSlice";
+import swal from 'sweetalert';
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
@@ -25,8 +26,9 @@ function Product({ id, title, price, description, category, image }) {
       image,
       hasPrime
     };
-
+    
     dispatch(addToBasket(product));
+    swal(`${product.title}`, "Your Product added to cart!", "success");
   };
 
   return (
@@ -57,7 +59,7 @@ function Product({ id, title, price, description, category, image }) {
           <img className="w-12" src="https://links.papareact.com/fdw" alt="" />
           <p className="text-xs text-gray-500 ">FERR Next-day Delivary</p>
         </div>
-      )}
+      )} 
       <button onClick={addItemToBasket} className="mt-auto button">
         Add to Cart
       </button> 

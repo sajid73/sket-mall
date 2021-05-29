@@ -39,7 +39,7 @@ export default Orders;
 export async function getServerSideProps(context) {
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-  const session = await getSession(context)
+  const session = await getSession(context);
 
   if (!session) {
     return {
@@ -57,7 +57,7 @@ export async function getServerSideProps(context) {
     .get();
 
 
-// //Stripe Orders 
+// //Stripe Orders   
     const orders = await Promise.all(
         stripeOrders.docs.map(async(order)=> ({
             id: order.id,
@@ -66,7 +66,7 @@ export async function getServerSideProps(context) {
             images: order.data().images,
             timestamp: moment(order.data().timestamp.toDate()).unix(),
             items: (
-                await stripe.checkout.sessions.listItems(order.id,{
+                await stripe.checkout.sessions.listLineItems(order.id,{
                     limit: 100
                 })
             ).data,
