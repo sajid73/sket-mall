@@ -8,12 +8,12 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import { Router, useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
-
+ 
 function Header() {
     const [session] = useSession();
     const router = useRouter();
     const items = useSelector(selectItems);
-
+ 
     return (
         <header>
             {/* top nav */}
@@ -29,7 +29,7 @@ function Header() {
                     />
                 </div>
                 {/* Search */}
-                <div className ='hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400  hover:bg-yellow-500'>
+                <div className =' sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400  hover:bg-yellow-500'>
                     <input className='p-2 h-full w-6 flex-grow flex-shrink  rounded-l-md focuse:outline-none px-4' type="text" />
                     <SearchIcon className ="h-12 p-4"/>
                 </div>
@@ -41,12 +41,12 @@ function Header() {
                     </p>
                     <p className ='font-extrabold md:text-sm'>Account & Lists</p>
                 </div>
-
+ 
                 <div className ='link'>
                     <p>Returns</p>
                     <p className ='font-extrabold md:text-sm'>& Orders</p>
                 </div>
-
+ 
                 <div onClick={() => router.push('/checkout')} className ='relative link flex items-center'>
                     <span className ='absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold'>
                         {items.length}
@@ -56,7 +56,7 @@ function Header() {
                 </div>
             </div>
             </div>
-
+ 
             {/* Bottom nav  */}
             {/* <div className ='flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-small'>
                 <p className ='link flex items-center'>
@@ -76,5 +76,5 @@ function Header() {
         </header>
     )
 }
-
+ 
 export default Header
