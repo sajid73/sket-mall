@@ -4,25 +4,19 @@ import Header from "../Components/Header";
 import ProductFeed from "../Components/ProductFeed";
 
 export default function Home({products}) {
-  // console.log(products)
   return (
     <div className ='bg-gray-100'>
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Sket-Mall</title>
       </Head>
-      <Header>
-
-
-      </Header>
+      
+      <Header />
 
       <main className ='max-w-screen-2xl mx-auto'>
-        {/* Banner */}
-
           <Banner/>
-        {/* ProductFeed */}
+
         <ProductFeed products = {products}/>
       </main>
-     
     </div>
   );
 }
