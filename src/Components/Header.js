@@ -8,7 +8,6 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import { Router, useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
-import { urlObjectKeys } from "next/dist/next-server/lib/utils";
  
 function Header() {
     const [session] = useSession();
@@ -18,7 +17,7 @@ function Header() {
     return (
         <header>
             {/* top nav */}
-            <div className = "flex items-center bg-transparent p-1 flex-grow py-2 bg-gradient-to-t from-yellow-100 to-green-500">
+            <div className = "flex items-center bg-transparent p-1 flex-grow py-2 navbarCustom">
                 <div className ="mt-2 flex items-center flex-grow sm:flex-grow-0">
                     <Image
                     onClick={() => router.push('/')}
