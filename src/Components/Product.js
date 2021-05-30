@@ -42,14 +42,6 @@ function Product({ id, title, price, description, category, image }) {
       <Image src={image} height={200} width={200} objectFit="contain" />
 
       <h4 className="my-3">{title}</h4>
-
-      <div className="flex">
-        {Array(rating)
-          .fill()
-          .map((_, i) => (
-            <StarIcon className="h-5 text-green-500"></StarIcon>
-          ))}
-      </div>
       <p className="text-xs mt-2 my-2 line-clamp-2">{description}</p>
 
       <div className="mb-5">

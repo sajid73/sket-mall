@@ -8,6 +8,7 @@ export default function Home({products}) {
   return (
     <div className ='bg-white-100'>
       <Head>
+      <link rel="icon" href="/favicon.png" />
         <title>Sket-Mall</title>
       </Head>
       
