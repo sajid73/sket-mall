@@ -6,7 +6,7 @@ import ProductFeed from "../Components/ProductFeed";
 
 export default function Home({products}) {
   return (
-    <div className ='bg-gray-100'>
+    <div className ='bg-white-100'>
       <Head>
         <title>Sket-Mall</title>
       </Head>

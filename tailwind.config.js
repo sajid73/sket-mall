@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        amazon_blue: {
+        sketmall_theme: {
           light: "#232F3E",
-          DEFAULT: "#131921",
+          DEFAULT: "lightgreen",
         },
       },
     },
